@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    --menu-hdr-letter-spacing: 4px;
+    --header-text-colour: #3a3a3a;
+}
+  
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +16,7 @@
 body {
     font-family: Lato, sans-serif;
     font-weight: 300;
-    color: #3a3a3a;
+    color: var(--header-text-colour);
 }
 
 /* Headers and logo */
@@ -17,7 +24,7 @@ h1, h2 {
     font-family: Oswald, sans-serif;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: var(--menu-hdr-letter-spacing);
     color: #252525;
 }
 
@@ -26,3 +33,32 @@ h1, h2 {
     font-size: 280%;
 }
 
+/* navigation links */
+#menu {
+    font-size: 110%;
+    letter-spacing: var(--menu-hdr-letter-spacing);
+}
+
+#menu, #logo {
+    line-height: 75px;
+}
+
+/* TODO css to reverse li order, just reorder html for now */
+#menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover {
+    border-bottom: 1px solid var(--header-text-colour);
+}
+
+.active {
+    border-bottom: 1px solid var(--header-text-colour);
+}
