@@ -5,6 +5,9 @@
     --menu-hdr-letter-spacing: 4px;
     --header-text-colour: #3a3a3a;
     --off-white: #fafafa;
+    --block-size: 300px;
+    --half-block-size: 150px;
+    --double-block-size: 600px;
 }
   
 
@@ -67,7 +70,7 @@ h1, h2 {
 
 /* hero image */
 #hero-outer {
-    height: 600px;
+    height: var(--double-block-size);
     width: 100%;
     overflow: hidden;
 
@@ -79,7 +82,7 @@ h1, h2 {
 }
 
 #hero-image {
-    height: 600px;
+    height: var(--double-block-size);
     width: 100%;
     background: url('../img/hero-image.webp') no-repeat center center;
 
@@ -122,8 +125,7 @@ h1, h2 {
 
 /* club ethos */
 #club-ethos {
-    height: 600px;
-
+    height: var(--double-block-size);
 }
 
 #left-about {
@@ -211,7 +213,7 @@ hr {
     color: var(--off-white);
     background-color: rgba(0, 0, 0, 0.6);
     width: 20%;
-    height: 300px;
+    height: var(--block-size);
     float: left;
     padding: 30px 0 0 10px;
     text-align: center;
@@ -221,4 +223,25 @@ hr {
 
 #times h2 {
     color: var(--off-white);
+}
+
+/* footer */
+
+footer {
+    height: var(--half-block-size);
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: var(--header-text-colour);
 }
